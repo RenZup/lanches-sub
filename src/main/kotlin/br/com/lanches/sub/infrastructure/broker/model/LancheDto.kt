@@ -1,6 +1,5 @@
 package br.com.lanches.sub.infrastructure.broker.model
 
-import io.micronaut.core.annotation.Introspected
 import java.util.*
 
 data class LancheDto(

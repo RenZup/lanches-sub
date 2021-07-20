@@ -24,11 +24,11 @@ class LancheDatabseImpl(private val cqlSession: CqlSession): LancheDatabase {
     override fun atualizar(lanche: LancheEntity) {
         cqlSession.execute(
             SimpleStatement.newInstance(
-                "UPDATE champion SET name = ?, shortDescription = ?, role = ?, difficulty = ? WHERE ID = ?",
-                lanche.id,
+                "UPDATE lanche SET nome = ?, ingredientes = ?, preco = ? WHERE ID = ?",
                 lanche.nome,
                 lanche.ingredientes,
-                lanche.preco
+                lanche.preco,
+                lanche.id
             )
         )
     }

@@ -7,5 +7,6 @@ data class LancheEvent(
 }
 
 enum class Operacao(private val string: String){
-    CADASTRAR("CADASTRAR")
+    CADASTRAR("CADASTRAR"),
+    ATUALIZAR("ATUALIZAR")
 }

@@ -13,6 +13,7 @@ class LancheServiceImpl(private val database: LancheDatabase): LancheService {
     }
 
     override fun atualizarLanche(dto: Lanche) {
+        database.atualizar(Convert.lancheToLancheEntity(dto))
     }
 
     override fun deletarLanche(dto: Lanche) {
