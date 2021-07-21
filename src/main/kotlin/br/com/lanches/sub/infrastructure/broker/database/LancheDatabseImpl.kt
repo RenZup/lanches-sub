@@ -36,7 +36,7 @@ class LancheDatabseImpl(private val cqlSession: CqlSession): LancheDatabase {
     override fun deletar(lanche: LancheEntity) {
         cqlSession.execute(
             SimpleStatement.newInstance(
-                "DELETE from champion where id = ?",
+                "DELETE from lanche where id = ?",
                 lanche.id,
             )
         )

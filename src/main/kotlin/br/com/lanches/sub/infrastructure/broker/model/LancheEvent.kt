@@ -8,5 +8,6 @@ data class LancheEvent(
 
 enum class Operacao(private val string: String){
     CADASTRAR("CADASTRAR"),
-    ATUALIZAR("ATUALIZAR")
+    ATUALIZAR("ATUALIZAR"),
+    DELETAR("DELETAR")
 }

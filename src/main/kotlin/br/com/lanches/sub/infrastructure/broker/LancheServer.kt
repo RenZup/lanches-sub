@@ -19,14 +19,14 @@ class LancheServer(private val service: LancheService) {
         logger.info("infrastructure/broker/ :${lancheEvent.operacao} $lancheEvent")
 
         if(lancheEvent.operacao == Operacao.CADASTRAR){
-            logger.info("infrastructure/broker/ :${lancheEvent.operacao} $lancheEvent")
             service.criarLanche(Convert.lancheEventToLanche(lancheEvent))
 
         }
         else if(lancheEvent.operacao== Operacao.ATUALIZAR){
-            logger.info("infrastructure/broker/ :${lancheEvent.operacao} $lancheEvent")
             service.atualizarLanche(Convert.lancheEventToLanche(lancheEvent))
         }
-
+        else if(lancheEvent.operacao == Operacao.DELETAR){
+            service.deletarLanche(Convert.lancheEventToLanche(lancheEvent))
+        }
     }
 }

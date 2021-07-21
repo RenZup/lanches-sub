@@ -17,5 +17,6 @@ class LancheServiceImpl(private val database: LancheDatabase): LancheService {
     }
 
     override fun deletarLanche(dto: Lanche) {
+        database.deletar(Convert.lancheToLancheEntity(dto))
     }
 }
